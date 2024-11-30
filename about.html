@@ -17,6 +17,7 @@
       background-color: #2d6a4f; /* Fallback background */
       height: 50vh;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       color: white;
@@ -26,6 +27,26 @@
       font-size: 2.5rem;
       margin: 0;
       text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    }
+    .button-container {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .button {
+      background-color: #e63946;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s;
+    }
+    .button:hover {
+      background-color: #d62828;
     }
     section {
       padding: 20px;
@@ -63,14 +84,18 @@
       header h1 {
         font-size: 2rem;
       }
+      .button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+      }
+      .button-container {
+        flex-direction: column;
+        gap: 10px;
+      }
       section p {
         font-size: 1rem;
       }
-      footer {
-        font-size: 0.9rem;
-      }
     }
-
     @media (max-width: 480px) {
       header {
         height: 40vh;
@@ -87,6 +112,11 @@
 <body>
   <header>
     <h1>About A Christmas Miracle</h1>
+    <div class="button-container">
+      <a href="index.html" class="button" aria-label="Go to Home">Home</a>
+      <a href="about.html" class="button" aria-label="Learn more about us">About</a>
+      <a id="buy-button" class="button" href="#" aria-label="Buy Now">Buy Now</a>
+    </div>
   </header>
 
   <section>
@@ -101,8 +131,7 @@
       He calls it "A Christmas Miracle" (ACM)—a cryptocurrency with no central owner, no corporate sponsors, and no pre-mining. It is designed to belong entirely to the community. Nick envisions ACM as a project that will thrive only if people embrace its core values: generosity, collaboration, and shared hope. On November 30th, he plans to release the framework for the coin, sharing every line of code and opening the project to the world.
     </p>
     <p>
-      Instead of launching with a traditional roadmap or promises of profits, Nick writes:
-      <em>"This is not my project—it's ours. ACM will only grow if the community believes in the power of kindness and works together to make it real. Let's create a true Christmas miracle."</em>
+      Instead of launching with a traditional roadmap or promises of profits, Nick writes: <em>"This is not my project—it's ours. ACM will only grow if the community believes in the power of kindness and works together to make it real. Let's create a true Christmas miracle."</em>
     </p>
     <p>
       The project is set to launch at the end of November, giving the community a few weeks to rally behind it before Christmas. Nick’s goal is simple yet ambitious: to grow ACM into a symbol of giving and unity, creating the foundation for something magical by December 25th.
