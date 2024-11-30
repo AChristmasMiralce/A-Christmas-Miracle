@@ -17,12 +17,21 @@
       text-align: center;
       color: white;
       height: 100vh;
-      background: url('background.webp') no-repeat center center/cover;
-      background-color: #2d6a4f; /* Fallback background */
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      background-color: #2d6a4f; /* Fallback background color */
+
+      /* Using both .webp and fallback image */
+      background-image: url('background.jpg'); /* Fallback for older browsers */
+      background-image: image-set(
+        url('background.webp') type("image/webp"), 
+        url('background.jpg') type("image/jpeg")
+      );
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
     }
     h1 {
       font-size: 3rem;
