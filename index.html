@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Christmas Miracle</title>
+  <style>
+    /* Base Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .hero {
+      position: relative;
+      text-align: center;
+      color: white;
+      height: 100vh;
+      background: url('your-image.jpg') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    h1 {
+      font-size: 3rem;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+      margin-bottom: 20px;
+    }
+    .button-container {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .button {
+      background-color: #e63946;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s;
+    }
+    .button:hover {
+      background-color: #d62828;
+    }
+    #coming-soon {
+      background-color: #e63946;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      text-decoration: none;
+      cursor: default;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: #2d6a4f;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .social-links a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+    .social-links a:hover {
+      color: #e63946;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+      .button {
+        font-size: 0.9rem; /* Smaller font size on phones */
+        padding: 8px 15px; /* Reduce button padding */
+      }
+      .button-container {
+        flex-direction: column;
+        gap: 10px;
+      }
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <h1>A Christmas Miracle</h1>
+    <div class="button-container">
+      <a href="index.html" class="button">Home</a>
+      <a href="about.html" class="button">About</a>
+      <a id="buy-button" class="button" href="#" style="display: none;">Buy Now</a>
+      <span id="coming-soon">Coming Soon!</span>
+    </div>
+  </div>
+
+  <footer>
+    <div class="social-links">
+      <a href="https://twitter.com/youraccount" target="_blank">Twitter</a>
+      <a href="https://t.me/yourgroup" target="_blank">Telegram</a>
+    </div>
+    <p>&copy; 2024 A Christmas Miracle. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Set the launch date in UTC
+    const targetDate = new Date("2024-12-01T00:00:00Z"); // UTC time for launch
+    const now = new Date();
+
+    const buyButton = document.getElementById("buy-button");
+    const comingSoon = document.getElementById("coming-soon");
+
+    if (now >= targetDate) {
+      buyButton.style.display = "inline-block"; // Show Buy Now button
+      comingSoon.style.display = "none"; // Hide Coming Soon message
+    }
+  </script>
+</body>
+</html>
