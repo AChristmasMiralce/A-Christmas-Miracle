@@ -48,6 +48,21 @@
     .button:hover {
       background-color: #d62828;
     }
+    #coming-soon {
+      background-color: #e63946;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      text-decoration: none;
+      cursor: default;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s;
+    }
+    #coming-soon:hover {
+      background-color: #d62828;
+    }
     section {
       padding: 20px;
       max-width: 800px;
@@ -115,7 +130,8 @@
     <div class="button-container">
       <a href="index.html" class="button" aria-label="Go to Home">Home</a>
       <a href="about.html" class="button" aria-label="Learn more about us">About</a>
-      <a id="buy-button" class="button" href="#" aria-label="Buy Now">Buy Now</a>
+      <a id="buy-button" class="button" href="#" style="display: none;" aria-label="Buy Now">Buy Now</a>
+      <span id="coming-soon" aria-label="Coming Soon">Coming Soon!</span>
     </div>
   </header>
 
@@ -148,5 +164,30 @@
     </div>
     <p>&copy; 2024 A Christmas Miracle. All rights reserved.</p>
   </footer>
+
+  <script>
+    // Set the launch date in UTC
+    const targetDate = new Date("2024-12-01T00:00:00Z"); // UTC time for launch
+    const now = new Date();
+
+    const buyButton = document.getElementById("buy-button");
+    const comingSoon = document.getElementById("coming-soon");
+
+    if (now >= targetDate) {
+      buyButton.style.display = "inline-block"; // Show Buy Now button
+      buyButton.href = "https://your-buy-link.com"; // Add the link for the Buy Now button
+      comingSoon.style.display = "none"; // Hide Coming Soon message
+    }
+  </script>
+  <noscript>
+    <style>
+      #buy-button { display: none; }
+      #coming-soon { display: block; }
+    </style>
+    <p style="text-align:center; color:white;">JavaScript is required to use all features of this page.</p>
+  </noscript>
+</body>
+</html>
+
 </body>
 </html>
