@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A Christmas Miracle - Coming soon this holiday season! Discover the joy of Christmas with our festive website.">
-  <title>A Christmas Miracle</title>
+  <meta name="description" content="Learn more about A Christmas Miracle and its inspiring vision for the holiday season and beyond.">
+  <title>About - A Christmas Miracle</title>
   <style>
     /* Base Styles */
     body {
@@ -12,56 +12,36 @@
       margin: 0;
       padding: 0;
     }
-    .hero {
-      position: relative;
-      text-align: center;
-      color: white;
-      height: 100vh;
-      background: url('your-image.jpg') no-repeat center center/cover;
+    header {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('your-image.jpg') no-repeat center center/cover;
       background-color: #2d6a4f; /* Fallback background */
+      height: 50vh;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
+      color: white;
+      text-align: center;
     }
-    h1 {
-      font-size: 3rem;
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
       text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    }
+    section {
+      padding: 20px;
+      max-width: 800px;
+      margin: 20px auto;
+      text-align: center;
+    }
+    section h2 {
+      font-size: 2rem;
       margin-bottom: 20px;
     }
-    .button-container {
-      display: flex;
-      gap: 15px;
-      margin-top: 20px;
+    section p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #444;
     }
-    .button {
-      background-color: #e63946;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      font-size: 1rem;
-      text-decoration: none;
-      cursor: pointer;
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-      transition: background-color 0.3s;
-    }
-    .button:hover {
-      background-color: #d62828;
-    }
-    #coming-soon {
-      background-color: #e63946;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      font-size: 1rem;
-      text-decoration: none;
-      cursor: default;
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-    }
-
-    /* Footer Styles */
     footer {
       background-color: #2d6a4f;
       color: white;
@@ -80,58 +60,64 @@
 
     /* Media Queries for Responsiveness */
     @media (max-width: 768px) {
-      .button {
+      header h1 {
+        font-size: 2rem;
+      }
+      section p {
+        font-size: 1rem;
+      }
+      footer {
         font-size: 0.9rem;
-        padding: 8px 15px;
       }
-      .button-container {
-        flex-direction: column;
-        gap: 10px;
+    }
+
+    @media (max-width: 480px) {
+      header {
+        height: 40vh;
       }
-      h1 {
-        font-size: 2.5rem;
+      section h2 {
+        font-size: 1.5rem;
+      }
+      section p {
+        font-size: 0.9rem;
       }
     }
   </style>
 </head>
 <body>
-  <div class="hero">
-    <h1>A Christmas Miracle</h1>
-    <div class="button-container">
-      <a href="index.html" class="button" aria-label="Go to Home">Home</a>
-      <a href="about.html" class="button" aria-label="Learn more about us">About</a>
-      <a id="buy-button" class="button" href="#" style="display: none;" aria-label="Buy Now">Buy Now</a>
-      <span id="coming-soon">Coming Soon!</span>
-    </div>
-  </div>
+  <header>
+    <h1>About A Christmas Miracle</h1>
+  </header>
+
+  <section>
+    <h2>Our Story</h2>
+    <p>
+      In the bustling, tech-driven world of finance, 2040 is shaping up to be the year the magic of Christmas meets the blockchain. It all starts with a brilliant but eccentric coder named Nick "Santa" Clauson, a tech wizard with a knack for turning dreams into code. Nick isn’t your average crypto enthusiast; he believes in using technology to spread joy, kindness, and, above all, miracles.
+    </p>
+    <p>
+      As December approaches, Nick notices something peculiar: despite the holiday season, the world seems more divided than ever. Inflation is rising, wallets are empty, and goodwill feels like a relic of the past. Determined to bring back the spirit of giving, Nick locks himself in his workshop (a cozy cabin in the mountains with high-speed internet) and begins coding what he hopes will be the most magical blockchain project ever.
+    </p>
+    <p>
+      He calls it "A Christmas Miracle" (ACM)—a cryptocurrency with no central owner, no corporate sponsors, and no pre-mining. It is designed to belong entirely to the community. Nick envisions ACM as a project that will thrive only if people embrace its core values: generosity, collaboration, and shared hope. On November 30th, he plans to release the framework for the coin, sharing every line of code and opening the project to the world.
+    </p>
+    <p>
+      Instead of launching with a traditional roadmap or promises of profits, Nick writes:
+      <em>"This is not my project—it's ours. ACM will only grow if the community believes in the power of kindness and works together to make it real. Let's create a true Christmas miracle."</em>
+    </p>
+    <p>
+      The project is set to launch at the end of November, giving the community a few weeks to rally behind it before Christmas. Nick’s goal is simple yet ambitious: to grow ACM into a symbol of giving and unity, creating the foundation for something magical by December 25th.
+    </p>
+    <p>
+      But his vision doesn’t end there. ACM isn’t just about this Christmas; it’s about building something that will thrive year after year. The real challenge, Nick believes, is keeping the spirit alive beyond the holidays, ensuring that the coin’s values of generosity and community carry forward long after the season’s decorations come down.
+    </p>
+  </section>
 
   <footer>
     <div class="social-links">
-      <a href="https://x.com/A_XMAS_Miracle" target="_blank" aria-label="Visit our Twitter page">Twitter</a>
+      <a href="https://twitter.com/youraccount" target="_blank" aria-label="Visit our Twitter page">Twitter</a>
       <a href="https://t.me/yourgroup" target="_blank" aria-label="Join us on Telegram">Telegram</a>
     </div>
-    <p>&copy; 2024 A Christmas Miracle. All rights reserved.</p>
+    <p>&copy; 2040 A Christmas Miracle. All rights reserved.</p>
   </footer>
-
-  <script>
-    // Set the launch date in UTC
-    const targetDate = new Date("2024-12-01T00:00:00Z"); // UTC time for launch
-    const now = new Date();
-
-    const buyButton = document.getElementById("buy-button");
-    const comingSoon = document.getElementById("coming-soon");
-
-    if (now >= targetDate) {
-      buyButton.style.display = "inline-block"; // Show Buy Now button
-      comingSoon.style.display = "none"; // Hide Coming Soon message
-    }
-  </script>
-  <noscript>
-    <style>
-      #buy-button { display: none; }
-      #coming-soon { display: block; }
-    </style>
-    <p style="text-align:center; color:white;">JavaScript is required to use all features of this page.</p>
-  </noscript>
 </body>
 </html>
